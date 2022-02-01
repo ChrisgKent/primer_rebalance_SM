@@ -1,20 +1,16 @@
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 
 bed_dir = snakemake@input[["bed_dirs"]]
 amplicon_dir = snakemake@input[["amp_dir"]]
 
 # Readings in the amplicon data
-amplicon = read_delim(amplicon_dir, col_names = FALSE)
+amplicon = read_delim(amplicon_dir, col_names = FALSE,show_col_types = FALSE)
 
 # Reading in the bed files
-data = lapply(bed_dir, read_delim, col_names = FALSE)
+data = lapply(bed_dir, read_delim, col_names = FALSE, show_col_types = FALSE)
 names(data) = str_extract(bed_dir, "barcode[0-9]*")
 
 comb_data = data.frame()
-
-print(snakemake@output[["plot"]])
-
-
 for(i in 1:length(data)){
   data[[i]]$X1 = names(data)[i]
   
