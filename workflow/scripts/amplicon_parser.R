@@ -1,7 +1,10 @@
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 
 primer_scheme_dir = snakemake@input[[1]]
-primer_scheme = read_delim(primer_scheme_dir, delim = "\t",col_names = FALSE)
+primer_scheme = read_delim(primer_scheme_dir, 
+                           delim = "\t",
+                           col_names = FALSE,
+                           show_col_types = FALSE)
 
 amplicons = primer_scheme %>% 
   mutate(amplicon = rep(1:(nrow(primer_scheme)/2),2) %>% sort) %>%
