@@ -1,0 +1,229 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                count    min threads    max threads
+---------------  -------  -------------  -------------
+all                    1              1              1
+amplicon_parser        1              1              1
+coverage              15              1              1
+total                 17              1              1
+
+Select jobs to execute...
+
+[Tue Feb  1 11:47:49 2022]
+rule amplicon_parser:
+    input: /Users/chriskent/V5_run/V5_analysis/V5.primer.bed
+    output: results/amplicons.bed
+    jobid: 2
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:47:52 2022]
+Finished job 2.
+1 of 17 steps (6%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:47:53 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode84.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode84.bed
+    jobid: 5
+    wildcards: barcode=V5_run_barcode84
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+
+[Tue Feb  1 11:47:53 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode85.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode85.bed
+    jobid: 6
+    wildcards: barcode=V5_run_barcode85
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+
+[Tue Feb  1 11:47:53 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode89.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode89.bed
+    jobid: 10
+    wildcards: barcode=V5_run_barcode89
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+
+[Tue Feb  1 11:47:53 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode86.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode86.bed
+    jobid: 7
+    wildcards: barcode=V5_run_barcode86
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:47:57 2022]
+Finished job 10.
+2 of 17 steps (12%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:47:57 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode92.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode92.bed
+    jobid: 13
+    wildcards: barcode=V5_run_barcode92
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:02 2022]
+Finished job 7.
+3 of 17 steps (18%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:02 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode94.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode94.bed
+    jobid: 15
+    wildcards: barcode=V5_run_barcode94
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:02 2022]
+Finished job 15.
+4 of 17 steps (24%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:02 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode88.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode88.bed
+    jobid: 9
+    wildcards: barcode=V5_run_barcode88
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:03 2022]
+Finished job 5.
+5 of 17 steps (29%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:03 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode82.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode82.bed
+    jobid: 3
+    wildcards: barcode=V5_run_barcode82
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:03 2022]
+Finished job 6.
+6 of 17 steps (35%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:03 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode95.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode95.bed
+    jobid: 16
+    wildcards: barcode=V5_run_barcode95
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:05 2022]
+Finished job 9.
+7 of 17 steps (41%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:05 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode93.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode93.bed
+    jobid: 14
+    wildcards: barcode=V5_run_barcode93
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:06 2022]
+Finished job 13.
+8 of 17 steps (47%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:06 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode87.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode87.bed
+    jobid: 8
+    wildcards: barcode=V5_run_barcode87
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:09 2022]
+Finished job 8.
+9 of 17 steps (53%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:09 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode91.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode91.bed
+    jobid: 12
+    wildcards: barcode=V5_run_barcode91
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:12 2022]
+Finished job 16.
+10 of 17 steps (59%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:12 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode90.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode90.bed
+    jobid: 11
+    wildcards: barcode=V5_run_barcode90
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:13 2022]
+Finished job 3.
+11 of 17 steps (65%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:13 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode81.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode81.bed
+    jobid: 1
+    wildcards: barcode=V5_run_barcode81
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:13 2022]
+Finished job 14.
+12 of 17 steps (71%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:13 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode83.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode83.bed
+    jobid: 4
+    wildcards: barcode=V5_run_barcode83
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:16 2022]
+Finished job 1.
+13 of 17 steps (76%) done
+[Tue Feb  1 11:48:17 2022]
+Finished job 12.
+14 of 17 steps (82%) done
+[Tue Feb  1 11:48:20 2022]
+Finished job 11.
+15 of 17 steps (88%) done
+[Tue Feb  1 11:48:23 2022]
+Finished job 4.
+16 of 17 steps (94%) done
+Select jobs to execute...
+
+[Tue Feb  1 11:48:23 2022]
+localrule all:
+    input: results/coverage/V5_run_barcode81.bed, results/coverage/V5_run_barcode82.bed, results/coverage/V5_run_barcode83.bed, results/coverage/V5_run_barcode84.bed, results/coverage/V5_run_barcode85.bed, results/coverage/V5_run_barcode86.bed, results/coverage/V5_run_barcode87.bed, results/coverage/V5_run_barcode88.bed, results/coverage/V5_run_barcode89.bed, results/coverage/V5_run_barcode90.bed, results/coverage/V5_run_barcode91.bed, results/coverage/V5_run_barcode92.bed, results/coverage/V5_run_barcode93.bed, results/coverage/V5_run_barcode94.bed, results/coverage/V5_run_barcode95.bed
+    jobid: 0
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 11:48:23 2022]
+Finished job 0.
+17 of 17 steps (100%) done
+Complete log: /Users/chriskent/primer_rebalance_SM/.snakemake/log/2022-02-01T114749.172931.snakemake.log

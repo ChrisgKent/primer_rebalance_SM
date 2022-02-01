@@ -1,0 +1,236 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                count    min threads    max threads
+---------------  -------  -------------  -------------
+all                    1              1              1
+amplicon_parser        1              1              1
+coverage              15              1              1
+rebalance              1              1              1
+total                 18              1              1
+
+Select jobs to execute...
+
+[Tue Feb  1 12:02:37 2022]
+rule amplicon_parser:
+    input: /Users/chriskent/V5_run/V5_analysis/V5.primer.bed
+    output: results/amplicons.bed
+    jobid: 3
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:02:41 2022]
+Finished job 3.
+1 of 18 steps (6%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:02:41 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode84.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode84.bed
+    jobid: 6
+    wildcards: barcode=V5_run_barcode84
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+
+[Tue Feb  1 12:02:41 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode87.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode87.bed
+    jobid: 9
+    wildcards: barcode=V5_run_barcode87
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+
+[Tue Feb  1 12:02:41 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode86.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode86.bed
+    jobid: 8
+    wildcards: barcode=V5_run_barcode86
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+
+[Tue Feb  1 12:02:41 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode85.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode85.bed
+    jobid: 7
+    wildcards: barcode=V5_run_barcode85
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:02:47 2022]
+Finished job 9.
+2 of 18 steps (11%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:02:47 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode93.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode93.bed
+    jobid: 15
+    wildcards: barcode=V5_run_barcode93
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:02:54 2022]
+Finished job 8.
+3 of 18 steps (17%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:02:54 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode95.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode95.bed
+    jobid: 17
+    wildcards: barcode=V5_run_barcode95
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:02:56 2022]
+Finished job 6.
+4 of 18 steps (22%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:02:57 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode91.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode91.bed
+    jobid: 13
+    wildcards: barcode=V5_run_barcode91
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:02:57 2022]
+Finished job 7.
+5 of 18 steps (28%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:02:57 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode81.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode81.bed
+    jobid: 2
+    wildcards: barcode=V5_run_barcode81
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:02:59 2022]
+Finished job 15.
+6 of 18 steps (33%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:02:59 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode83.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode83.bed
+    jobid: 5
+    wildcards: barcode=V5_run_barcode83
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:03:01 2022]
+Finished job 2.
+7 of 18 steps (39%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:03:01 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode94.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode94.bed
+    jobid: 16
+    wildcards: barcode=V5_run_barcode94
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:03:01 2022]
+Finished job 16.
+8 of 18 steps (44%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:03:02 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode92.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode92.bed
+    jobid: 14
+    wildcards: barcode=V5_run_barcode92
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:03:06 2022]
+Finished job 17.
+9 of 18 steps (50%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:03:06 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode88.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode88.bed
+    jobid: 10
+    wildcards: barcode=V5_run_barcode88
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:03:08 2022]
+Finished job 13.
+10 of 18 steps (56%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:03:08 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode90.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode90.bed
+    jobid: 12
+    wildcards: barcode=V5_run_barcode90
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:03:11 2022]
+Finished job 10.
+11 of 18 steps (61%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:03:11 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode82.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode82.bed
+    jobid: 4
+    wildcards: barcode=V5_run_barcode82
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:03:14 2022]
+Finished job 14.
+12 of 18 steps (67%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:03:14 2022]
+rule coverage:
+    input: /Volumes/ssd_open/sorted_bed/V5_run_barcode89.sorted.bam, results/amplicons.bed
+    output: results/coverage/V5_run_barcode89.bed
+    jobid: 11
+    wildcards: barcode=V5_run_barcode89
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+[Tue Feb  1 12:03:18 2022]
+Finished job 11.
+13 of 18 steps (72%) done
+[Tue Feb  1 12:03:19 2022]
+Finished job 5.
+14 of 18 steps (78%) done
+[Tue Feb  1 12:03:20 2022]
+Finished job 12.
+15 of 18 steps (83%) done
+[Tue Feb  1 12:03:22 2022]
+Finished job 4.
+16 of 18 steps (89%) done
+Select jobs to execute...
+
+[Tue Feb  1 12:03:22 2022]
+rule rebalance:
+    input: results/coverage/V5_run_barcode81.bed, results/coverage/V5_run_barcode82.bed, results/coverage/V5_run_barcode83.bed, results/coverage/V5_run_barcode84.bed, results/coverage/V5_run_barcode85.bed, results/coverage/V5_run_barcode86.bed, results/coverage/V5_run_barcode87.bed, results/coverage/V5_run_barcode88.bed, results/coverage/V5_run_barcode89.bed, results/coverage/V5_run_barcode90.bed, results/coverage/V5_run_barcode91.bed, results/coverage/V5_run_barcode92.bed, results/coverage/V5_run_barcode93.bed, results/coverage/V5_run_barcode94.bed, results/coverage/V5_run_barcode95.bed, results/amplicons.bed
+    output: results/rebalanced.tsv
+    jobid: 1
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 43 of /Users/chriskent/primer_rebalance_SM/workflow/Snakefile:
+Job Missing files after 5 seconds:
+results/rebalanced.tsv
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 1 completed successfully, but some output files are missing. 1
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/chriskent/primer_rebalance_SM/.snakemake/log/2022-02-01T120237.390176.snakemake.log

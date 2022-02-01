@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job          count    min threads    max threads
+---------  -------  -------------  -------------
+all              1              1              1
+rebalance        1              1              1
+total            2              1              1
+
+Select jobs to execute...
+
+[Tue Feb  1 12:04:20 2022]
+rule rebalance:
+    input: results/coverage/V5_run_barcode81.bed, results/coverage/V5_run_barcode82.bed, results/coverage/V5_run_barcode83.bed, results/coverage/V5_run_barcode84.bed, results/coverage/V5_run_barcode85.bed, results/coverage/V5_run_barcode86.bed, results/coverage/V5_run_barcode87.bed, results/coverage/V5_run_barcode88.bed, results/coverage/V5_run_barcode89.bed, results/coverage/V5_run_barcode90.bed, results/coverage/V5_run_barcode91.bed, results/coverage/V5_run_barcode92.bed, results/coverage/V5_run_barcode93.bed, results/coverage/V5_run_barcode94.bed, results/coverage/V5_run_barcode95.bed, results/amplicons.bed
+    output: results/rebalanced.tsv
+    jobid: 1
+    resources: tmpdir=/var/folders/tj/dbg1wcw533d_t688g3kljt1m0000gn/T
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 43 of /Users/chriskent/primer_rebalance_SM/workflow/Snakefile:
+Job Missing files after 5 seconds:
+results/rebalanced.tsv
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 1 completed successfully, but some output files are missing. 1
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/chriskent/primer_rebalance_SM/.snakemake/log/2022-02-01T120419.812424.snakemake.log

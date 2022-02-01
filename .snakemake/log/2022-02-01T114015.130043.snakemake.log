@@ -1,0 +1,18 @@
+Building DAG of jobs...
+MissingInputException in line 33 of /Users/chriskent/primer_rebalance_SM/workflow/Snakefile:
+Missing input files for rule coverage:
+barcode88
+barcode82
+barcode93
+barcode84
+barcode92
+barcode90
+barcode89
+barcode95
+barcode85
+barcode83
+barcode86
+barcode94
+barcode91
+barcode81
+barcode87

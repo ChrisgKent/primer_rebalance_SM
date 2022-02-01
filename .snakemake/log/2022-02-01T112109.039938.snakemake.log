@@ -1,0 +1,2 @@
+SyntaxError in line 38 of /Users/chriskent/primer_rebalance_SM/workflow/Snakefile:
+unterminated string literal (detected at line 62)

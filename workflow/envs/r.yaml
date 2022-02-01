@@ -1,0 +1,8 @@
+name: my_r_env
+channels:
+ - r
+dependencies:
+ - r=4.1
+ - r-ggplot2=3.3.5
+ - r-tidyverse=1.2.1
+ 

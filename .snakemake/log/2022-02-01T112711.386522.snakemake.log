@@ -1,0 +1,3 @@
+NameError in line 25 of /Users/chriskent/primer_rebalance_SM/workflow/Snakefile:
+name 'BARCODES' is not defined
+  File "/Users/chriskent/primer_rebalance_SM/workflow/Snakefile", line 25, in <module>

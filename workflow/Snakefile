@@ -1,0 +1,53 @@
+import pathlib
+
+configfile: "config/config.yaml"
+
+if 'use_conda' in config and config['use_conda']:
+    workflow.use_conda = True
+
+# This input function finds all subseqs within each clade
+## and returns them as a list 
+BARCODES = glob_wildcards(pathlib.Path(config["mapped_bed_dir"])/"{barcode}.sorted.bam").barcode
+print(BARCODES)
+
+def GETBARCODES(wildcards):
+    return pathlib.Path(config["mapped_bed_dir"])/"{barcode}.sorted.bam"
+
+OUTPUT_DIR = pathlib.Path(config["output_dir"])
+SCHEME = pathlib.Path(config["scheme"])
+
+rule all:
+    input:
+        OUTPUT_DIR/"rebalanced.tsv"
+
+rule amplicon_parser:
+    input: 
+        SCHEME
+    output:
+        OUTPUT_DIR/"amplicons.bed"
+    conda:
+        "envs/r.yaml"
+    script:
+        "scripts/amplicon_parser.R"
+
+
+rule coverage:
+    input:
+        bed = GETBARCODES,
+        scheme = OUTPUT_DIR/"amplicons.bed"
+    output:
+        OUTPUT_DIR/"coverage/{barcode}.bed"
+    shell:
+        "bedtools coverage -a {input.scheme} -b {input.bed} -f 0.5 > {output}"
+
+rule rebalance:
+    input:
+        bed_dirs = expand(OUTPUT_DIR/"coverage/{barcode}.bed", barcode=BARCODES),
+        amp_dir = OUTPUT_DIR/"amplicons.bed"
+    output:
+        tsv = OUTPUT_DIR/"rebalanced.tsv",
+        plot = OUTPUT_DIR/"proportion.png"
+    conda:
+        "envs/r.yaml"
+    script:
+        "scripts/primer_rebal.R"

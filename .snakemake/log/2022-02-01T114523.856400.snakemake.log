@@ -1,0 +1,3 @@
+WildcardError in line 23 of /Users/chriskent/primer_rebalance_SM/workflow/Snakefile:
+No values given for wildcard 'barcode'.
+  File "/Users/chriskent/primer_rebalance_SM/workflow/Snakefile", line 23, in <module>
