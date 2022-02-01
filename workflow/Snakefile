@@ -8,7 +8,6 @@ if 'use_conda' in config and config['use_conda']:
 # This input function finds all subseqs within each clade
 ## and returns them as a list 
 BARCODES = glob_wildcards(pathlib.Path(config["mapped_bed_dir"])/"{barcode}.sorted.bam").barcode
-print(BARCODES)
 
 def GETBARCODES(wildcards):
     return pathlib.Path(config["mapped_bed_dir"])/"{barcode}.sorted.bam"
@@ -27,6 +26,10 @@ rule amplicon_parser:
         OUTPUT_DIR/"amplicons.bed"
     conda:
         "envs/r.yaml"
+    log:
+        "logs/amplicon_parser.log"
+    message:
+        "Parsing Primer Scheme to find amplicons"
     script:
         "scripts/amplicon_parser.R"
 
@@ -37,6 +40,8 @@ rule coverage:
         scheme = OUTPUT_DIR/"amplicons.bed"
     output:
         OUTPUT_DIR/"coverage/{barcode}.bed"
+    message:
+        "Determining Coverage of {wildcards.barcode} "
     shell:
         "bedtools coverage -a {input.scheme} -b {input.bed} -f 0.5 > {output}"
 
@@ -49,5 +54,7 @@ rule rebalance:
         plot = OUTPUT_DIR/"proportion.png"
     conda:
         "envs/r.yaml"
+    message:
+        "Running rebalance"
     script:
         "scripts/primer_rebal.R"
