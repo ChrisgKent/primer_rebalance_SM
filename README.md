@@ -1,5 +1,5 @@
-# Currently Underactive developement. 
-# FUll readme will be availbe soon 
+# Currently Under active development. 
+The full readme will be available soon 
 
 # primer_rebalance_SM
 This rebalances multiplex primer schemes as described in "Improving the evenness of SARS-CoV-2 genome coverage by titration of primer concentration"
@@ -9,7 +9,7 @@ To install
 ```
 git clone https://github.com/ChrisgKent/primer_rebalance_SM
 ```
-Activate / install the conda enviroment
+Activate/install the conda environment
 
 ```
 cd primer_rebalance
