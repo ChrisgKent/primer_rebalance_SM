@@ -15,7 +15,7 @@ Activate/install the conda environment
 cd primer_rebalance
 conda env create -f primer_rebalance.yaml
 
-conda activate nmaskgen
+conda activate primer_rebalance
 ```
 
 # Inputs
