@@ -55,13 +55,14 @@ rule rebalance:
         amp_dir = OUTPUT_DIR/"amplicons.bed"
     output:
         tsv = OUTPUT_DIR/"rebalanced.tsv",
-        plot = OUTPUT_DIR/"proportion.png"
+        plot = OUTPUT_DIR/"proportion.png",
+        coverage = OUTPUT_DIR/"coverage.tsv"
     conda:
         "envs/r.yaml"
     params:
         n = config["n"],
         normalised_n_cap = config["normalised_n_cap"],
-        ul_of_each_primer = config["ul_of_each_primer"],
+        total_pool_ul = config["total_pool_ul"],
         ul_of_10uM_primer_stock_in_25ul = config["ul_of_10uM_primer_stock_in_25ul"]
     message:
         "Running rebalance"
