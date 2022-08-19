@@ -27,5 +27,7 @@ conda activate primer_rebalance
 ```mapped_bed_dir``` - Point to a directory containing only the mapped .bam files. Such a the <name>.sorted.bam files from ncov-artic-nf pipeline 
 
 ```output_dir``` - The output directory, containing the results. Defaults to results
+  
+```total_pool_ul``` - The total volume of each 100mM pool in ul. Defaults to 500
 
 
