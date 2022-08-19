@@ -1,5 +1,10 @@
-scheme: "/Users/chriskent/V5_run/V5_analysis/V5.primer.bed"
-
-mapped_bed_dir: "/Volumes/ssd_open/sorted_bed"
+scheme: ""
+mapped_bed_dir: ""
 
 output_dir: "results/"
+
+# Other params. Leave as default
+n: 3
+normalised_n_cap: 10
+total_pool_ul: 500
+ul_of_10uM_primer_stock_in_25ul: 3.6
